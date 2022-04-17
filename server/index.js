@@ -1,26 +1,28 @@
+import 'dotenv/config'
+import express from 'express'
+import bodyParser from 'body-parser'
+import mongoose from 'mongoose'
+import cors from 'cors'
+import postRoutes from './routes/posts.js'
+import userRoutes from './routes/users.js'
 
-import express from 'express';
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import cors from 'cors';
-
-import postRoutes from './routes/posts.js';
-import userRouter from "./routes/user.js";
-
-const app = express();
+const app = express()
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
-app.use(cors());
+app.use(cors())
 
-app.use('/posts', postRoutes);
-app.use("/user", userRouter);
+app.use('/posts', postRoutes)
+app.use('/users', userRoutes)
 
-const CONNECTION_URL = 'mongodb+srv://sangaja006:sangaja006@cluster0.slnpm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-const PORT = process.env.PORT|| 5001;
+const port = process.env.PORT || 5000
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
-  .catch((error) => console.log(`${error} did not connect`));
-
-mongoose.set('useFindAndModify', false);
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() =>
+    app.listen(port, () => console.log(`Server running on port: ${port}`))
+  )
+  .catch((error) => console.log(error.message))
