@@ -1,6 +1,6 @@
 <h1 align="center">  &nbsp; VisitAndTell  </h1>
 
-  <img src=./client/public/memories-readme.png>
+  <img src="https://github.com/atharva137/Memories-App-MERN/blob/master/client/public/memories-readme.png">
 
 <h1></h1>
 
@@ -92,18 +92,15 @@ $ npm start (for React client side development)
 ## 👨‍💻 &nbsp; Demo
 
 <p align="center">
-<p>Screenshoots of some main features</p>
-<img src=./demo_images/desktop.png>
+<p>Screenshots of some main features</p>
+<img src="https://github.com/sangajapatel06/memories-mern/blob/main/client/src/demo_images/desktop.png">
 <p align="center">
-  <img src="./demo_images/iphone1.png" width="200" height="356">
+  <img src="https://github.com/sangajapatel06/memories-mern/blob/main/client/src/demo_images/pic2.png">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./demo_images/iphone2.png" width="200" height="356">
 </p>
  <br/>
  <p align="center">
-  <img src = "./demo_images/ipad.png" width="300" height="402"> 
-&nbsp; &nbsp; &nbsp; &nbsp;
- <img alt="tablet mockup 2" src="./demo_images/ipad2.png" width="300" height="402" margin="5px"/> 
+&nbsp; &nbsp; &nbsp; &nbsp; 
 </p>
 </p>
 
